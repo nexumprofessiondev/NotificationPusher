@@ -31,28 +31,34 @@
             "email": "cedric@dugat.me"
         },
         {
+            "name": "Igor Ivkovic",
+            "role": "Főispán",
+            "homepage": "https://github.com/nexumprofessiondev/NotificationPusher"
+        },
+        {
             "name": "Contributors",
             "homepage": "https://github.com/Ph3nol/NotificationPusher/contributors"
         }
     ],
     "require": {
-        "php": ">=8.0.18",
+        "php": "^5.6 || ^7.0 || ^8.0",
         "ext-ctype": "*",
         "symfony/options-resolver": ">=2.3,<5",
         "symfony/console": ">=2.3,<6",
         "symfony/process": ">=2.3,<5",
-        "zendframework/zendservice-apple-apns": "~1.4",
-        "zendframework/zendservice-google-gcm": "~2.1",
-        "zendframework/zend-validator": "^2.12",
+        "zendframework/zendservice-apple-apns": "dev-dev-php8",
+        "zendframework/zendservice-google-gcm": "dev-dev-php8",
+        "laminas/laminas-validator": "^2.12",
         "doctrine/inflector": "~1.1",
         "symfony/filesystem": ">=2.3,<5",
-        "symfony/debug": ">=2.3,<5"
+        "symfony/debug": ">=2.3,<5",
+        "laminas/laminas-dependency-plugin": "^2.1"
     },
     "require-dev": {
-        "atoum/atoum": "^3.1",
         "atoum/stubs": "^2.5",
         "symfony/var-dumper": ">=2.3,<5",
-        "atoum/visibility-extension": "^1.3"
+        "atoum/atoum": "4.0.3",
+        "atoum/visibility-extension": "2.0.0"
     },
     "config": {
         "bin-dir": "bin",
@@ -60,6 +66,9 @@
         "secure-http": false,
         "platform": {
             "php": "8.0.18"
+        },
+        "allow-plugins": {
+            "laminas/laminas-dependency-plugin": true
         }
     },
     "bin": [

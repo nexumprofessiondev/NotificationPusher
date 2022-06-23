@@ -19,8 +19,8 @@ use Sly\NotificationPusher\Model\DeviceInterface;
 use Sly\NotificationPusher\Model\GcmMessage;
 use Sly\NotificationPusher\Model\MessageInterface;
 use Sly\NotificationPusher\Model\PushInterface;
-use Zend\Http\Client as HttpClient;
-use Zend\Http\Client\Adapter\Socket as HttpSocketAdapter;
+use Laminas\Http\Client as HttpClient;
+use Laminas\Http\Client\Adapter\Socket as HttpSocketAdapter;
 use ZendService\Google\Exception\InvalidArgumentException as ZendInvalidArgumentException;
 use ZendService\Google\Exception\RuntimeException as ServiceRuntimeException;
 use ZendService\Google\Gcm\Client as ServiceClient;
@@ -120,7 +120,7 @@ class Gcm extends BaseAdapter
             $newClient = new HttpClient(
                 null,
                 [
-                    'adapter' => 'Zend\Http\Client\Adapter\Socket',
+                    'adapter' => 'Laminas\Http\Client\Adapter\Socket',
                     'sslverifypeer' => false,
                 ]
             );
