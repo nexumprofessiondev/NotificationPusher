@@ -25,7 +25,7 @@ class Push extends BaseOptionedModel implements PushInterface
     /**
      * @var string
      */
-    private $status;
+    private $status = self::STATUS_PENDING;
 
     /**
      * @var AdapterInterface
@@ -73,7 +73,6 @@ class Push extends BaseOptionedModel implements PushInterface
         $this->devices = $devices;
         $this->message = $message;
         $this->options = $options;
-        $this->status = self::STATUS_PENDING;
 
         $this->checkDevicesTokens();
     }
